@@ -288,7 +288,7 @@ void saveImageToFile(const char *filename, int image[HEIGHT][WIDTH]) {
 
 int main() {
     // 执行Python脚本
-    if (system("python e:/VScode/cfiles/picture.py") != 0) {
+    if (system("./picture.py") != 0) {
         printf("执行Python脚本失败\n");
         return 1;
     }
