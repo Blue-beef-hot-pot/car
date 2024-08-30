@@ -288,10 +288,10 @@ void saveImageToFile(const char *filename, int image[HEIGHT][WIDTH]) {
 
 int main() {
     // 执行Python脚本
-    // if (system("./picture.py") != 0) {
-    //     printf("执行Python脚本失败\n");
-    //     return 1;
-    // }
+    if (system("python ./picture.py") != 0) {
+        printf("执行Python脚本失败\n");
+        return 1;
+    }
 
     // 读取灰度图像数据
     FILE *file = fopen("./output/gray_image.txt", "r");
