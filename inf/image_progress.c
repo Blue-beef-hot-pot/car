@@ -288,13 +288,13 @@ void saveImageToFile(const char *filename, int image[HEIGHT][WIDTH]) {
 
 int main() {
     // 执行Python脚本
-    if (system("./picture.py") != 0) {
-        printf("执行Python脚本失败\n");
-        return 1;
-    }
+    // if (system("./picture.py") != 0) {
+    //     printf("执行Python脚本失败\n");
+    //     return 1;
+    // }
 
     // 读取灰度图像数据
-    FILE *file = fopen("gray_image.txt", "r");
+    FILE *file = fopen("./output/gray_image.txt", "r");
     if (!file) {
         perror("无法打开文件");
         return 1;
@@ -308,7 +308,7 @@ int main() {
     fclose(file);
 
     // 保存图像到文件
-    saveImageToFile("output.bmp", image);
+    saveImageToFile("./output/output.bmp", image);
     printf("图像已保存到 output.bmp\n");
 
     // // 使用模糊大津法计算阈值
@@ -328,7 +328,7 @@ int main() {
     thresholdImage(image, threshold);
 
     // 保存图像到文件
-    saveImageToFile("output1.bmp", image);
+    saveImageToFile("./output/output1.bmp", image);
     printf("图像已保存到 output1.bmp\n");
 
     return 0;
