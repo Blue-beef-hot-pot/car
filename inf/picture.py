@@ -16,8 +16,8 @@ def read_and_convert_image(image_path, target_width, target_height):
     return resized_image
 
 image_path = "./input/input6.jpg"
-target_width = 128
-target_height = 64
+target_width = 80
+target_height = 60
 gray_image = read_and_convert_image(image_path, target_width, target_height)
 
 # 将灰度图像数据保存到文件，以便C程序读取

@@ -3,8 +3,8 @@
 #include <math.h>
 #include <sys/time.h>
 
-#define WIDTH 128
-#define HEIGHT 64
+#define WIDTH 80
+#define HEIGHT 60
 #define GRAYSCALE 256
 
 int image[HEIGHT][WIDTH];
