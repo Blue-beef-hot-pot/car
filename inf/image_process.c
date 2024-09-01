@@ -197,7 +197,7 @@ void generateImage(int image[HEIGHT][WIDTH]) {
 
     for (int i = 0; i < HEIGHT; i++) {
         for (int j = 0; j < WIDTH; j++) {
-            // 计算当前像素到图像中心的距离
+            // 计算当前像素到中心线的距离
             int distance = abs(centerX - j);
             image[i][j] = (distance < 30) ? 200 : (distance < 32) ? 40 : 100;
         }
